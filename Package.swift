@@ -27,7 +27,7 @@ let package = Package(
                           package: "lottie-spm")
              ]),
         .binaryTarget(name: "MyTestFramework",
-                      url: "https://github.com/vishwa8816/MyTestFrameworkA/releases/download/Frist/MyTestFramework.xcframework.zip",
-                      checksum: "806906cda7277317b269b49e306dfb5bc520d6f3b6afc66fea9ac6dc9e47c1ac")
+                      url: "https://github.com/vishwa8816/MyTestFrameworkA/releases/download/Second/MyTestFramework.xcframework.zip",
+                      checksum: "35c5b4f025ab70b0db0317a03c6edddc15e45a7b0722687cc935fc9f4b867140")
     ]
 )
