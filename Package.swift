@@ -10,7 +10,6 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "MyTestPackageRemote",
-            type: .dynamic,
             targets: ["MyTestPackageRemote"]),
     ],
     dependencies: [
@@ -19,8 +18,14 @@ let package = Package(
     targets: [
         .target(
             name: "MyTestPackageRemote",
-            dependencies: ["MyTestFramework", .product(name: "Lottie",
-                                                       package: "lottie-spm")]),
+            dependencies: ["MyTestPackageWrapper"]),
+        .target(
+             name: "MyTestPackageWrapper",
+             dependencies: [
+                 .target(name: "MyTestFramework"),
+                 .product(name: "Lottie",
+                          package: "lottie-spm")
+             ]),
         .binaryTarget(name: "MyTestFramework",
                       url: "https://github.com/vishwa8816/MyTestFrameworkA/releases/download/Frist/MyTestFramework.xcframework.zip",
                       checksum: "806906cda7277317b269b49e306dfb5bc520d6f3b6afc66fea9ac6dc9e47c1ac")
