@@ -13,6 +13,7 @@ let package = Package(
             targets: ["MyTestPackageRemote"]),
     ],
     dependencies: [
+        .package(url: "https://github.com/airbnb/lottie-spm.git", exact:"4.2.0")
     ],
     targets: [
         .target(
@@ -21,7 +22,9 @@ let package = Package(
         .target(
              name: "MyTestPackageWrapper",
              dependencies: [
-                 .target(name: "MyTestFramework")
+                 .target(name: "MyTestFramework"),
+                 .product(name: "Lottie",
+                          package: "lottie-spm")
              ]),
         .binaryTarget(name: "MyTestFramework",
                       url: "https://github.com/vishwa8816/MyTestFrameworkA/releases/download/Nine/MyTestFramework.xcframework.zip",
