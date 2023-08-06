@@ -27,7 +27,7 @@ let package = Package(
                           package: "LottiStatic")
              ]),
         .binaryTarget(name: "MyTestFramework",
-                      url: "https://github.com/vishwa8816/MyTestFrameworkA/releases/download/Seven/MyTestFramework.xcframework.zip",
-                      checksum: "2d437aa37d0d98b82ff7869566def1a9dce670a093015d1fa3f81c5a58bcd83d")
+                      url: "https://github.com/vishwa8816/MyTestFrameworkA/releases/download/Eight/MyTestFramework.xcframework.zip",
+                      checksum: "af04cf936acb2961aa24ce86beb8c5758be4550cc1f9c6a56fe0d564d53463ae")
     ]
 )
