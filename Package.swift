@@ -13,7 +13,7 @@ let package = Package(
             targets: ["MyTestPackageRemote"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/airbnb/lottie-spm.git", from: "4.2.0")
+        .package(url: "https://github.com/vishwa8816/LottiStatic", branch: "main")
     ],
     targets: [
         .target(
@@ -23,11 +23,11 @@ let package = Package(
              name: "MyTestPackageWrapper",
              dependencies: [
                  .target(name: "MyTestFramework"),
-                 .product(name: "Lottie",
-                          package: "lottie-spm")
+                 .product(name: "LottiStatic",
+                          package: "LottiStatic")
              ]),
         .binaryTarget(name: "MyTestFramework",
-                      url: "https://github.com/vishwa8816/MyTestFrameworkA/releases/download/Second/MyTestFramework.xcframework.zip",
-                      checksum: "35c5b4f025ab70b0db0317a03c6edddc15e45a7b0722687cc935fc9f4b867140")
+                      url: "https://github.com/vishwa8816/MyTestFrameworkA/releases/download/Seven/MyTestFramework.xcframework.zip",
+                      checksum: "2d437aa37d0d98b82ff7869566def1a9dce670a093015d1fa3f81c5a58bcd83d")
     ]
 )
